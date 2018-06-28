@@ -1,7 +1,5 @@
 package com.procountor;
 
-import java.util.Date;
-
 public class Invoice {
 
     private Integer invoiceId;
@@ -25,57 +23,44 @@ public class Invoice {
 
     }
 
+
     public Integer getInvoiceId() {
         return invoiceId;
     }
-    public void setInvoiceId(Integer invoiceId) {
-        this.invoiceId = invoiceId;
-    }
+
+
 
     public String getCompanyName() {
         return companyName;
-    }
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
     }
 
     public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
 
     public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
 
     public String getProductName() {
         return productName;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 
     public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
 
     public String getPayDate() {
         return payDate;
     }
+/**
 
     public void setPayDate(String payDate) {
         this.payDate = payDate;
+        } */
     }
-}
+
