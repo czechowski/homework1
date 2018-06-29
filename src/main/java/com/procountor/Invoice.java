@@ -1,26 +1,15 @@
 package com.procountor;
 
+import java.util.List;
+
 public class Invoice {
 
     private Integer invoiceId;
-    private String companyName;
-    private String accountNumber;
-    private Integer amount;
-    private String productName;
-    private Double price;
-    private String payDate;
+    private List<String> products;
 
-    Invoice(Integer invoiceId, String companyName, String accountNumber, String productName, Integer amount, Double price, String payDate){
+    public Invoice(Integer invoiceId, List<String> products) {
         this.invoiceId = invoiceId;
-        this.companyName = companyName;
-        this.accountNumber = accountNumber;
-        this.productName = productName;
-        this.amount = amount;
-        this.price = price;
-        this.payDate = payDate;
-
-
-
+        this.products = products;
     }
 
 
@@ -28,39 +17,81 @@ public class Invoice {
         return invoiceId;
     }
 
-
-
-    public String getCompanyName() {
-        return companyName;
+    public void setInvoiceId(Integer invoiceId) {
+        this.invoiceId = invoiceId;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
+    public List<String> getProducts() {
+        return products;
     }
 
-
-    public Integer getAmount() {
-        return amount;
+    public void setProducts(List<String> products) {
+        this.products = products;
     }
 
 
-    public String getProductName() {
-        return productName;
+    //    private String companyName;
+//
+//
+//    private String accountNumber;
+//    private Integer amount;
+//    private String productName;
+//    private Double price;
+//    private String payDate;
+//
+//    Invoice(Integer invoiceId, String companyName, String accountNumber, String productName, Integer amount, Double price, String payDate) {
+//        this.invoiceId = invoiceId;
+//        this.companyName = companyName;
+//        this.accountNumber = accountNumber;
+//        this.productName = productName;
+//        this.amount = amount;
+//        this.price = price;
+//        this.payDate = payDate;
+//
+//
+//    }
+//
+//    public Integer getInvoiceId() {
+//        return invoiceId;
+//    }
+//
+//    public String getCompanyName() {
+//        return companyName;
+//    }
+//
+//    public String getAccountNumber() {
+//        return accountNumber;
+//    }
+//
+//    public Integer getAmount() {
+//        return amount;
+//    }
+//
+//    public String getProductName() {
+//        return productName;
+//    }
+//
+//    public Double getPrice() {
+//        return price;
+//    }
+//
+//    public String getPayDate() {
+//        return payDate;
+//    }
+
+    /**
+     * public void setPayDate(String payDate) {
+     * this.payDate = payDate;
+     * }
+     */
+
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "invoiceId=" + invoiceId +
+                ", products=" + products +
+                '}';
     }
-
-
-    public Double getPrice() {
-        return price;
-    }
-
-
-    public String getPayDate() {
-        return payDate;
-    }
-/**
-
-    public void setPayDate(String payDate) {
-        this.payDate = payDate;
-        } */
-    }
+}
 
