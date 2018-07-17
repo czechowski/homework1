@@ -25,6 +25,10 @@ public class Invoice {
             totalValue += product.getAmount() * product.getPrice();
         }
         return totalValue;
-
+        }
+    Double total = calculateTotalValue();
+    public Double getTotal() {
+        return total;
     }
+
 }
