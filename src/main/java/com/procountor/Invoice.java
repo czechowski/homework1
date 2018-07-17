@@ -6,6 +6,7 @@ public class Invoice {
 
     private Integer invoiceId;
     private List<Product> products;
+    private Double totalValue;
 
     public Invoice(Integer invoiceId, List<Product> products) {
         this.invoiceId = invoiceId;
@@ -14,10 +15,16 @@ public class Invoice {
 
     @Override
     public String toString() {
-        return "Invoice{" +
-                "invoiceId=" + invoiceId +
-                ", products=" + products +
-                '}';
+        return "invoiceId=" + invoiceId +
+                " products=" + products;
+    }
+
+    public Double calculateTotalValue() {
+        totalValue = 0d;
+        for (Product product : products) {
+            totalValue += product.getAmount() * product.getPrice();
+        }
+        return totalValue;
+
     }
 }
-

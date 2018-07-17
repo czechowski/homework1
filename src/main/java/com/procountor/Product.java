@@ -1,7 +1,5 @@
  package com.procountor;
 
-import java.util.List;
-
 public class Product {
 
    private String productName;
@@ -13,17 +11,20 @@ public class Product {
         this.productName = productName;
         this.amount = amount;
         this.price = price;
-
-
-
     }
 
     @Override
     public String toString() {
-        return "Product{" +
-                "product name=" + productName +
-                ", amount=" + amount + ", price=" + price +
-                '}';
+        return  "product name=" + productName +
+                ", amount=" + amount + ", price=" + price ;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public Double getPrice() {
+        return price;
     }
 
 }

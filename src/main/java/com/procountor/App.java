@@ -10,6 +10,7 @@ public class App {
         List<Invoice> invoices  = new ArrayList<>();
         List<Product> products = new ArrayList<>();
 
+
         Product product1 = new Product("ziemniak", 3, (double) 7);
         Product product2 = new Product("ziemniak2", 5, (double) 9);
         products.add(product1);
@@ -19,7 +20,8 @@ public class App {
 
         invoices.add(invoice);
         invoices.add(invoice2);
-
+        System.out.println(products);
         System.out.println(invoices);
-    }
+
+        }
 }
