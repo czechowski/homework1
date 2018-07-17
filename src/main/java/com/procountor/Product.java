@@ -1,4 +1,4 @@
-package com.procountor;
+ package com.procountor;
 
 import java.util.List;
 
@@ -15,19 +15,7 @@ public class Product {
         this.price = price;
 
 
-       public Integer getAmount() {
-           return amount;
-       }
 
-
-       public String getProductName() {
-           return productName;
-       }
-
-
-       public Double getPrice() {
-           return price;
-       }
     }
 
     @Override

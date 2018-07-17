@@ -5,9 +5,9 @@ import java.util.List;
 public class Invoice {
 
     private Integer invoiceId;
-    private List<String> products;
+    private List<Product> products;
 
-    public Invoice(Integer invoiceId, List<String> products) {
+    public Invoice(Integer invoiceId, List<Product> products) {
         this.invoiceId = invoiceId;
         this.products = products;
     }

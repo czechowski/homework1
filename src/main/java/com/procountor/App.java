@@ -12,11 +12,11 @@ public class App {
 
         Product product1 = new Product("ziemniak", 3, (double) 7);
         Product product2 = new Product("ziemniak2", 5, (double) 9);
-        Invoice invoice = new Invoice(1, product1,);
-        Invoice invoice2 = new Invoice(2, Arrays.asList("ziemniak2", "drugi ziemniak2"));
+        products.add(product1);
+        products.add(product2);
+        Invoice invoice = new Invoice(1, Arrays.asList(product1,product2));
+        Invoice invoice2 = new Invoice(2, Arrays.asList(product1, product2));
 
-
-products.add(product1);
         invoices.add(invoice);
         invoices.add(invoice2);
 
