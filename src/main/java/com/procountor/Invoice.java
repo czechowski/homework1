@@ -8,9 +8,14 @@ public class Invoice {
     private List<Product> products;
     private Double totalValue;
 
+
+
+
     public Invoice(Integer invoiceId, List<Product> products) {
         this.invoiceId = invoiceId;
         this.products = products;
+        this.totalValue = calculateTotalValue();
+
     }
 
     @Override
@@ -19,6 +24,8 @@ public class Invoice {
                 " products=" + products;
     }
 
+
+
     public Double calculateTotalValue() {
         totalValue = 0d;
         for (Product product : products) {
@@ -26,9 +33,9 @@ public class Invoice {
         }
         return totalValue;
         }
-    Double total = calculateTotalValue();
+
     public Double getTotal() {
-        return total;
+        return totalValue;
     }
 
 }
