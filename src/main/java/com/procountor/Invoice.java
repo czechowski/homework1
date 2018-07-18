@@ -8,9 +8,6 @@ public class Invoice {
     private List<Product> products;
     private Double totalValue;
 
-
-
-
     public Invoice(Integer invoiceId, List<Product> products) {
         this.invoiceId = invoiceId;
         this.products = products;
@@ -20,11 +17,9 @@ public class Invoice {
 
     @Override
     public String toString() {
-        return "invoiceId=" + invoiceId +
-                " products=" + products;
+        return "Invoice ID =" + invoiceId + "\n" +
+                " Products:" + "\n" + products +  "\n" + "Invoice total value=" + totalValue +  "\n" +  "\n" ;
     }
-
-
 
     public Double calculateTotalValue() {
         totalValue = 0d;
@@ -33,9 +28,5 @@ public class Invoice {
         }
         return totalValue;
         }
-
-    public Double getTotal() {
-        return totalValue;
-    }
 
 }

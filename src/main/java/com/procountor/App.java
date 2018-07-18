@@ -14,35 +14,33 @@ public class App {
 
 
         Product product1 = new Product("ziemniak", 3, (double) 7);
-        Product product2 = new Product("ziemniak2", 5, (double) 9);
+        Product product2 = new Product("pomidor", 5, (double) 9);
+        Product product3 = new Product("kalafior", 1, (double) 5);
+        Product product4 = new Product("truskawka", 15, (double) 20);
         products.add(product1);
         products.add(product2);
         Invoice invoice = new Invoice(1, Arrays.asList(product1, product2));
-        Invoice invoice2 = new Invoice(2, Arrays.asList(product1));
+        Invoice invoice2 = new Invoice(2, Arrays.asList(product3, product4, product1));
 
         invoices.add(invoice);
         invoices.add(invoice2);
 
-
-        System.out.println(products);
+        System.out.println("LIST OF INVOICES");
         System.out.println(invoices);
-        System.out.println(invoice.getTotal());
+       // System.out.println(Arrays.toString(invoices.toArray()));
+        System.out.println("Sum of all invoices=" + Calculator.calculateInvoiceValue(invoices));
 
     }
 
     public static class Calculator {
-        private Double invoiceValue;
-        private List<Invoice> invoices;
 
-        public Double calculateInvoiceValue(){
-            invoiceValue = 0d;
+        public static Double calculateInvoiceValue( List<Invoice> invoices){
+            double invoiceValue = 0;
+
             for (Invoice invoice : invoices) {
-                Invoice.calculateTotalValue();
+                invoiceValue += invoice.calculateTotalValue();
             }
-            return invoiceValue;
-        }
 
-        public Double getInvoiceValue() {
             return invoiceValue;
         }
     }
