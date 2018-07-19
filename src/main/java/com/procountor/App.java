@@ -1,11 +1,8 @@
 package com.procountor;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static com.procountor.Invoice.*;
 
 public class App {
     public static void main(String[] args) {
@@ -27,7 +24,6 @@ public class App {
 
         System.out.println("LIST OF INVOICES");
         System.out.println(invoices);
-       // System.out.println(Arrays.toString(invoices.toArray()));
         System.out.println("Sum of all invoices=" + Calculator.calculateInvoiceValue(invoices));
 
     }

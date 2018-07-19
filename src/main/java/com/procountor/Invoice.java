@@ -18,7 +18,7 @@ public class Invoice {
     @Override
     public String toString() {
         return "Invoice ID =" + invoiceId + "\n" +
-                " Products:" + "\n" + products +  "\n" + "Invoice total value=" + totalValue +  "\n" +  "\n" ;
+                " Products:" + "\n" + products + "\n" + "Invoice total value=" + totalValue + "\n" + "\n";
     }
 
     public Double calculateTotalValue() {
@@ -27,6 +27,6 @@ public class Invoice {
             totalValue += product.getAmount() * product.getPrice();
         }
         return totalValue;
-        }
+    }
 
 }
